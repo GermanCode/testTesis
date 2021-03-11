@@ -1,0 +1,31 @@
+{
+  "name": "test_tesis-main",
+  "version": "1.0.0",
+  "description": "",
+  "main": "pru.js",
+  "dependencies": {
+    "nerdamer": "^1.1.7",
+    "dotenv": "^8.2.0",
+    "es6-promisify": "^6.1.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.0",
+    "@babel/core": "^7.13.1",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/preset-env": "^7.13.5",
+    "babel-plugin-transform-util-promisify": "^0.2.2",
+    "babel-promisify": "^1.0.0",
+    "nodemon": "^2.0.7",
+    "rimraf": "^3.0.2"
+  },
+  "scripts": {
+    "build": "babel src -d dist",
+    "start": "npm run build && node dist/pru.js",
+    "restart": "rimraf dist && npm run start",
+    "dev": "nodemon --exec npm run restart",
+    "local": "nodemon --exec node dist/pru.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
